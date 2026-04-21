@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="processPageTitle">Méthode — Romus DEV</title>
+  <meta name="description"
+    content="La méthode Romus DEV pour créer un site : compréhension du besoin, conception de la page, livraison et ajustements."
+    data-i18n="processMetaDescription" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <script src="./languages/languages.js"></script>
+  <script src="./js/script.js" defer></script>
+
+</head>
+
+<body>
+  <a href="#contenu" class="skip-link" data-i18n="skipLink">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html#top" class="brand" aria-label="Romus DEV accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- même logo -->
+        </span>
+        <span class="brand-name">
+          <strong>ROMUS DEV</strong>
+          <span data-i18n="brandSubtitle">Sites internet</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="services.html" data-i18n="navServices">Services</a>
+        <a href="gallery.html" data-i18n="navGallery">Galerie</a>
+        <a href="process.html" data-i18n="navProcess">Méthode</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+
+        <div class="toolbar">
+          <div class="lang-switcher" aria-label="Choix de langue">
+            <button class="lang-btn active" type="button" data-lang="fr">FR</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+            <button class="lang-btn" type="button" data-lang="ru">RU</button>
+          </div>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Activer le mode sombre"></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow" data-i18n="processHeroEyebrow">Méthode de travail</div>
+          <h1 data-i18n="processHeroTitle">Une méthode simple, étape par étape.</h1>
+          <p data-i18n="processHeroText">
+            Le but est que vous sachiez exactement comment se passe la création de votre site,
+            combien de temps cela prend et ce que vous devez fournir à chaque étape.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#etapes" data-i18n="processHeroCtaPrimary">Voir les étapes</a>
+            <a class="btn btn-secondary" href="contact.html" data-i18n="processHeroCtaSecondary">Parler de votre
+              projet</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal" aria-hidden="true">
+          <div class="temple">
+            <!-- SVG comme avant -->
+          </div>
+          <div class="floating-note">
+            <strong>Romus DEV</strong>
+            <span data-i18n="processHeroNote">
+              Une structure claire pour éviter les surprises et les malentendus.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="etapes">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="processStepsTitle">Les grandes étapes du projet</h2>
+          <p data-i18n="processStepsIntro">
+            Les détails peuvent varier selon le pack choisi, mais la logique reste la même&nbsp;: comprendre, concevoir,
+            livrer.
+          </p>
+        </div>
+
+        <div class="process">
+          <article class="step reveal">
+            <div class="step-number">I</div>
+            <h3 data-i18n="processStep1Title">Découverte et cadrage</h3>
+            <p data-i18n="processStep1Text">
+              Nous échangeons sur votre activité, votre public cible, les sites que vous appréciez
+              et les objectifs de votre futur site.
+            </p>
+          </article>
+
+          <article class="step reveal">
+            <div class="step-number">II</div>
+            <h3 data-i18n="processStep2Title">Structure et contenu</h3>
+            <p data-i18n="processStep2Text">
+              Nous définissons les sections, l’ordre des informations et les textes essentiels,
+              même si ce n’est qu’une première version.
+            </p>
+          </article>
+
+          <article class="step reveal">
+            <div class="step-number">III</div>
+            <h3 data-i18n="processStep3Title">Design et intégration</h3>
+            <p data-i18n="processStep3Text">
+              Je construis la page dans le style Romus DEV, responsive et prête à être présentée à vos clients.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="livraison">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="processDeliveryTitle">Ce que vous recevez à la fin</h2>
+          <p data-i18n="processDeliveryIntro">
+            Vous ne recevez pas seulement «&nbsp;un fichier&nbsp;», mais une base propre que vous pouvez réutiliser,
+            faire évoluer ou intégrer dans un futur projet plus complexe.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <span class="service-label" data-i18n="processDeliveryCard1Label">Code</span>
+            <h3 data-i18n="processDeliveryCard1Title">HTML, CSS et JS séparés</h3>
+            <p data-i18n="processDeliveryCard1Text">
+              Fichiers organisés, commentaires si besoin, et structure prête pour un développeur backend.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-label" data-i18n="processDeliveryCard2Label">Design</span>
+            <h3 data-i18n="processDeliveryCard2Title">Identité visuelle cohérente</h3>
+            <p data-i18n="processDeliveryCard2Text">
+              Palette beige/romaine, typographies choisies, hiérarchie claire pour les titres et sous-titres.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-label" data-i18n="processDeliveryCard3Label">Suivi</span>
+            <h3 data-i18n="processDeliveryCard3Title">Ajustements légers</h3>
+            <p data-i18n="processDeliveryCard3Text">
+              Petites corrections de texte ou de détails visuels après la livraison, pour finaliser l’ensemble.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta-process">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div>
+            <div class="eyebrow" style="margin-bottom:1rem" data-i18n="processCtaEyebrow">Envie de commencer</div>
+            <h2
+              style="font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:0.8rem;letter-spacing:0.03em"
+              data-i18n="processCtaTitle">
+              Présentez votre projet en quelques lignes.
+            </h2>
+            <p data-i18n="processCtaText">
+              Vous pouvez m’envoyer un message avec votre activité, votre objectif et le type de site que vous
+              souhaitez.
+              Je vous répondrai avec la meilleure option parmi mes services.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-primary" data-i18n="processCtaButton">Aller au contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-wrap">
+    <div class="container footer-card">
+      <div class="footer-top">
+        <div>
+          <p data-i18n="footerLeft">© 2026 Romus DEV — Création de sites internet.</p>
+          <p data-i18n="footerRight">Une base simple aujourd'hui, évolutive demain.</p>
+        </div>
+        <div class="footer-social" aria-label="Réseaux sociaux">
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

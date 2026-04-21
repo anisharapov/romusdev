@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="galleryPageTitle">Galerie — Romus DEV</title>
+  <meta name="description"
+    content="Galerie des projets et exemples visuels créés par Romus DEV : sites vitrines élégants, landing pages et interfaces modernes."
+    data-i18n="galleryMetaDescription" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <script src="./languages/languages.js"></script>
+  <script src="./js/script.js" defer></script>
+
+</head>
+
+<body>
+  <a href="#contenu" class="skip-link" data-i18n="skipLink">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html#top" class="brand" aria-label="Romus DEV accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 52V22L32 10L52 22V52" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M20 52V28H44V52" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M18 22H46" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" />
+            <path d="M25 28V52M32 28V52M39 28V52" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" />
+            <path d="M9 52H55" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="brand-name">
+          <strong>ROMUS DEV</strong>
+          <span data-i18n="brandSubtitle">Sites internet</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="services.html" data-i18n="navServices">Services</a>
+        <a href="gallery.html" data-i18n="navGallery">Galerie</a>
+        <a href="process.html" data-i18n="navProcess">Méthode</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+
+        <div class="toolbar">
+          <div class="lang-switcher" aria-label="Choix de langue">
+            <button class="lang-btn active" type="button" data-lang="fr">FR</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+            <button class="lang-btn" type="button" data-lang="ru">RU</button>
+          </div>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Activer le mode sombre"></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow" data-i18n="galleryHeroEyebrow">Exemples visuels</div>
+          <h1 data-i18n="galleryHeroTitle">Une galerie pour montrer votre style de sites.</h1>
+          <p data-i18n="galleryHeroText">
+            Cette page regroupe des aperçus de mises en page, de sections et d’ambiances possibles pour vos futurs
+            projets
+            Romus DEV. L’idée est de rassurer vos clients sur le rendu final.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#grid" data-i18n="galleryHeroCtaPrimary">Voir les aperçus</a>
+            <a class="btn btn-secondary" href="services.html" data-i18n="galleryHeroCtaSecondary">Retour aux
+              services</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal" aria-hidden="true">
+          <div class="temple">
+            <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M46 408H354" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
+              <path d="M72 380H328" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
+              <path d="M90 144H310" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
+              <path d="M200 70L332 130H68L200 70Z" fill="currentColor" opacity="0.18" />
+              <path d="M68 130H332" stroke="currentColor" stroke-width="12" stroke-linecap="round" />
+              <path d="M112 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
+              <path d="M168 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
+              <path d="M232 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
+              <path d="M288 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
+              <path d="M94 96L200 48L306 96" stroke="currentColor" stroke-width="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="floating-note">
+            <strong>Romus DEV</strong>
+            <span data-i18n="galleryHeroNote">
+              Vous pourrez remplacer ces blocs par de vrais projets clients dès que vous en aurez.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="grid">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="galleryGridTitle">Aperçus de sections possibles</h2>
+          <p data-i18n="galleryGridIntro">
+            Chaque vignette représente une idée de section&nbsp;: hero, services, témoignages, blog, contact, etc.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <span class="service-label" data-i18n="galleryCard1Label">Héros</span>
+            <h3 data-i18n="galleryCard1Title">En-tête de page impactant</h3>
+            <p data-i18n="galleryCard1Text">
+              Titre fort, sous-titre rassurant et boutons d’action clairs, avec un visuel ou une illustration romaine.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-label" data-i18n="galleryCard2Label">Services</span>
+            <h3 data-i18n="galleryCard2Title">Cartes de services lisibles</h3>
+            <p data-i18n="galleryCard2Text">
+              3 à 6 cartes pour présenter ce que vous proposez, avec un titre, une courte description et un prix
+              visible.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-label" data-i18n="galleryCard3Label">Témoignages</span>
+            <h3 data-i18n="galleryCard3Title">Avis clients structurés</h3>
+            <p data-i18n="galleryCard3Text">
+              Photo, nom du client et court texte pour renforcer la confiance de vos visiteurs.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="preview-carousel">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="galleryCarouselTitle">Idées de mises en page</h2>
+          <p data-i18n="galleryCarouselIntro">
+            Vous pouvez reprendre la logique du carrousel de votre page d’accueil et y placer de vraies captures de
+            projets.
+          </p>
+        </div>
+
+        <div class="cta-box reveal">
+          <div>
+            <div class="eyebrow" style="margin-bottom:1rem" data-i18n="galleryCtaEyebrow">Étape suivante</div>
+            <h2
+              style="font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:0.8rem;letter-spacing:0.03em"
+              data-i18n="galleryCtaTitle">
+              Transformons ces idées en vrais projets pour vos clients.
+            </h2>
+            <p data-i18n="galleryCtaText">
+              Quand vous aurez quelques réalisations, vous pourrez les ajouter ici en images ou en courtes vidéos.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-primary" data-i18n="galleryCtaButton">Parler d’un projet</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-wrap">
+    <div class="container footer-card">
+      <div class="footer-top">
+        <div>
+          <p data-i18n="footerLeft">© 2026 Romus DEV — Création de sites internet.</p>
+          <p data-i18n="footerRight">Une base simple aujourd'hui, évolutive demain.</p>
+        </div>
+        <div class="footer-social" aria-label="Réseaux sociaux">
+          <!-- mêmes icônes que sur les autres pages -->
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

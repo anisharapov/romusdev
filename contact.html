@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="contactPageTitle">Contact — Romus DEV</title>
+  <meta name="description"
+    content="Contactez Romus DEV pour discuter de votre projet de site internet, demander un devis ou poser une question."
+    data-i18n="contactMetaDescription" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <script src="./languages/languages.js"></script>
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+  <a href="#contenu" class="skip-link" data-i18n="skipLink">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html#top" class="brand" aria-label="Romus DEV accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- logo -->
+        </span>
+        <span class="brand-name">
+          <strong>ROMUS DEV</strong>
+          <span data-i18n="brandSubtitle">Sites internet</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="services.html" data-i18n="navServices">Services</a>
+        <a href="gallery.html" data-i18n="navGallery">Galerie</a>
+        <a href="process.html" data-i18n="navProcess">Méthode</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+
+        <div class="toolbar">
+          <div class="lang-switcher" aria-label="Choix de langue">
+            <button class="lang-btn active" type="button" data-lang="fr">FR</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+            <button class="lang-btn" type="button" data-lang="ru">RU</button>
+          </div>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Activer le mode sombre"></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow" data-i18n="contactHeroEyebrow">Contact</div>
+          <h1 data-i18n="contactHeroTitle">Parlons de votre projet de site.</h1>
+          <p data-i18n="contactHeroText">
+            Vous pouvez utiliser le formulaire ci-dessous ou m’écrire directement par email.
+            Quelques phrases suffisent pour commencer.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#form" data-i18n="contactHeroCtaPrimary">Remplir le formulaire</a>
+            <a class="btn btn-secondary" href="mailto:contact@romus.dev" data-i18n="contactHeroCtaSecondary">Écrire un
+              email</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal" aria-hidden="true">
+          <div class="temple">
+            <!-- svg -->
+          </div>
+          <div class="floating-note">
+            <strong>Romus DEV</strong>
+            <span data-i18n="contactHeroNote">
+              Réponse courte et honnête&nbsp;: si je peux vous aider, je vous proposerai une option claire.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="form">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="contactFormTitle">Formulaire de contact</h2>
+          <p data-i18n="contactFormIntro">
+            Présentez-vous, décrivez votre activité et le type de site que vous souhaitez.
+            Vous pouvez également indiquer un budget ou une fourchette.
+          </p>
+        </div>
+
+        <form class="cta-box reveal" action="#" method="post">
+          <div>
+            <label for="name" data-i18n="contactFormNameLabel">Nom / Prénom</label>
+            <input id="name" name="name" type="text" placeholder="Votre nom" required />
+          </div>
+
+          <div>
+            <label for="email" data-i18n="contactFormEmailLabel">Email</label>
+            <input id="email" name="email" type="email" placeholder="votre.email@example.com" required />
+          </div>
+
+          <div>
+            <label for="channel" data-i18n="contactFormChannelLabel">Moyen de contact préféré</label>
+            <input id="channel" name="channel" type="text" placeholder="WhatsApp, Telegram, téléphone..." />
+          </div>
+
+          <div>
+            <label for="message" data-i18n="contactFormMessageLabel">Parlez-moi de votre projet</label>
+            <textarea id="message" name="message" rows="5"
+              placeholder="Type de site, objectif, délais, budget approximatif..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" data-i18n="contactFormSubmit">
+            Envoyer le message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section id="direct">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div>
+            <div class="eyebrow" style="margin-bottom:1rem" data-i18n="contactDirectEyebrow">Contact direct</div>
+            <h2
+              style="font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:0.8rem;letter-spacing:0.03em"
+              data-i18n="contactDirectTitle">
+              Vous préférez un message rapide&nbsp;?
+            </h2>
+            <p data-i18n="contactDirectText">
+              Vous pouvez m’écrire directement par email ou via votre canal préféré.
+              Cette base de page permet d’ajouter plus tard des liens cliquables vers WhatsApp ou Telegram.
+            </p>
+          </div>
+          <a href="mailto:romusdev@gmail.com" class="btn btn-secondary" data-i18n="contactDirectButton">
+            romusdev@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-wrap">
+    <div class="container footer-card">
+      <div class="footer-top">
+        <div>
+          <p data-i18n="footerLeft">© 2026 Romus DEV — Création de sites internet.</p>
+          <p data-i18n="footerRight">Une base simple aujourd'hui, évolutive demain.</p>
+        </div>
+        <div class="footer-social" aria-label="Réseaux sociaux">
+          <!-- mêmes icônes que sur les autres pages -->
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

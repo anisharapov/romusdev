@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="servicesPageTitle">Services — Romus DEV</title>
+  <meta name="description"
+    content="Les services Romus DEV : création de sites vitrines élégants, landing pages et sites complets pour petites entreprises et indépendants."
+    data-i18n="servicesMetaDescription" />
+
+  <!-- mêmes fonts + CSS que l'accueil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- JS principal (thème + langues) -->
+  <script src="./languages/languages.js"></script>
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+  <a href="#contenu" class="skip-link" data-i18n="skipLink">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html#top" class="brand" aria-label="Romus DEV accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 52V22L32 10L52 22V52" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M20 52V28H44V52" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M18 22H46" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" />
+            <path d="M25 28V52M32 28V52M39 28V52" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" />
+            <path d="M9 52H55" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="brand-name">
+          <strong>ROMUS DEV</strong>
+          <span data-i18n="brandSubtitle">Sites internet</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="services.html" data-i18n="navServices">Services</a>
+        <a href="gallery.html" data-i18n="navGallery">Galerie</a>
+        <a href="process.html" data-i18n="navProcess">Méthode</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+
+        <div class="toolbar">
+          <div class="lang-switcher" aria-label="Choix de langue">
+            <button class="lang-btn active" type="button" data-lang="fr">FR</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+            <button class="lang-btn" type="button" data-lang="ru">RU</button>
+          </div>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Activer le mode sombre"></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- HERO SERVICES -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow" data-i18n="servicesHeroEyebrow">Détail des offres</div>
+          <h1 data-i18n="servicesHeroTitle">Mes services de création de sites internet.</h1>
+          <p data-i18n="servicesHeroText">
+            Voici comment je peux vous accompagner concrètement&nbsp;: de la simple landing page pour lancer
+            votre activité, jusqu’au site complet avec plusieurs pages, formulaires et sections avancées.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#packs" data-i18n="servicesHeroCtaPrimary">Voir les packs</a>
+            <a class="btn btn-secondary" href="contact.html" data-i18n="servicesHeroCtaSecondary">Demander un devis
+              précis</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal" aria-hidden="true">
+          <div class="temple">
+            <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M46 408H354" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
+              <path d="M72 380H328" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
+              <path d="M90 144H310" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
+              <path d="M200 70L332 130H68L200 70Z" fill="currentColor" opacity="0.18" />
+              <path d="M68 130H332" stroke="currentColor" stroke-width="12" stroke-linecap="round" />
+              <path d="M112 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
+              <path d="M168 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
+              <path d="M232 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
+              <path d="M288 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
+              <path d="M94 96L200 48L306 96" stroke="currentColor" stroke-width="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="floating-note">
+            <strong>Romus DEV</strong>
+            <span data-i18n="servicesHeroNote">
+              Chaque service est pensé pour être simple à comprendre, avec un prix clair et un résultat soigné.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKS PRINCIPAUX -->
+    <section id="packs">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="packsTitle">Les packs Romus DEV</h2>
+          <p data-i18n="packsIntro">
+            Trois niveaux pour s’adapter à votre budget et à l’étape où se trouve votre projet.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card featured reveal">
+            <span class="service-label" data-i18n="pack1Label">Pack lancement</span>
+            <h3 data-i18n="pack1Title">Landing page premium</h3>
+            <div class="price" data-i18n="pack1Price">€490</div>
+            <ul>
+              <li data-i18n="pack1Feat1">Une page unique optimisée pour présenter votre offre principale.</li>
+              <li data-i18n="pack1Feat2">Section héros, services, témoignage ou argumentaire.</li>
+              <li data-i18n="pack1Feat3">Design beige/romain cohérent avec votre image.</li>
+              <li data-i18n="pack1Feat4">Intégration d’un bouton vers WhatsApp, email ou prise de rendez-vous.</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" data-i18n="pack1Cta">Commencer avec ce pack</a>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-label" data-i18n="pack2Label">Pack vitrine</span>
+            <h3 data-i18n="pack2Title">Site 3 à 5 sections</h3>
+            <div class="price" data-i18n="pack2Price">€790</div>
+            <ul>
+              <li data-i18n="pack2Feat1">Page structurée&nbsp;: accueil, services, à propos, contact.</li>
+              <li data-i18n="pack2Feat2">Galerie simple ou carrousel d’images.</li>
+              <li data-i18n="pack2Feat3">Formulaire de contact basique.</li>
+              <li data-i18n="pack2Feat4">Optimisé pour mobile et tablette.</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary" data-i18n="pack2Cta">Parler du projet</a>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-label" data-i18n="pack3Label">Pack sur mesure</span>
+            <h3 data-i18n="pack3Title">Site complet évolutif</h3>
+            <div class="price" data-i18n="pack3Price">Sur devis</div>
+            <ul>
+              <li data-i18n="pack3Feat1">Architecture personnalisée (plusieurs pages ou sections complexes).</li>
+              <li data-i18n="pack3Feat2">Fonctionnalités spécifiques (blog simple, FAQ, formulaires, etc.).</li>
+              <li data-i18n="pack3Feat3">Accompagnement sur le contenu et la structure.</li>
+              <li data-i18n="pack3Feat4">Préparation pour une intégration future dans un framework.</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary" data-i18n="pack3Cta">Demander un devis détaillé</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION DÉTAILS -->
+    <section id="details">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="detailsTitle">Ce qui est inclus dans chaque service</h2>
+          <p data-i18n="detailsIntro">
+            Quel que soit le pack choisi, vous bénéficiez d’un code propre, d’un design cohérent et d’un site
+            conçu pour rassurer vos clients finaux.
+          </p>
+        </div>
+
+        <div class="process">
+          <article class="step reveal">
+            <div class="step-number">I</div>
+            <h3 data-i18n="details1Title">Design cohérent</h3>
+            <p data-i18n="details1Text">
+              Palette beige inspirée de Rome, typographies lisibles et hiérarchie claire des titres et des textes.
+            </p>
+          </article>
+          <article class="step reveal">
+            <div class="step-number">II</div>
+            <h3 data-i18n="details2Title">Code propre</h3>
+            <p data-i18n="details2Text">
+              HTML, CSS et JavaScript séparés pour faciliter les futures évolutions et intégrations.
+            </p>
+          </article>
+          <article class="step reveal">
+            <div class="step-number">III</div>
+            <h3 data-i18n="details3Title">Accompagnement</h3>
+            <p data-i18n="details3Text">
+              Vous savez ce que vous recevez, comment l’utiliser et quelles sont les prochaines étapes si vous souhaitez
+              faire évoluer votre site.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contact-services">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div>
+            <div class="eyebrow" style="margin-bottom:1rem" data-i18n="servicesCtaEyebrow">Prêt à avancer</div>
+            <h2
+              style="font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:0.8rem;letter-spacing:0.03em"
+              data-i18n="servicesCtaTitle">
+              Choisissons ensemble le bon service pour votre projet.
+            </h2>
+            <p data-i18n="servicesCtaText">
+              Indiquez simplement où vous en êtes (idée, projet en cours, refonte) et votre budget approximatif.
+              Je vous répondrai avec la solution la plus logique pour vous.
+            </p>
+          </div>
+          <a href="mailto:contact@romus.dev" class="btn btn-primary" data-i18n="servicesCtaButton">Écrire à Romus
+            DEV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-wrap">
+    <div class="container footer-card">
+      <div class="footer-top">
+        <div>
+          <p data-i18n="footerLeft">© 2026 Romus DEV — Création de sites internet.</p>
+          <p data-i18n="footerRight">Une base simple aujourd'hui, évolutive demain.</p>
+        </div>
+        <div class="footer-social" aria-label="Réseaux sociaux">
+          <!-- mêmes icônes que l'index -->
+          <a class="social-link" href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.2-1.5 1.5-1.5h1.7V4.7c-.3 0-1.5-.1-2.8-.1-2.8 0-4.8 1.7-4.8 4.8v2.5H6v3.1h2.9v8h4.6z" />
+            </svg>
+          </a>
+          <a class="social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1-.9-1.3-.9-1.3-.8-.6.1-.6.1-.6.9.1 1.4.9 1.4.9.8 1.4 2.2 1 2.8.8.1-.6.3-1 .6-1.2-2.2-.3-4.6-1.1-4.6-5.1 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.3.1-2.8 0 0 .9-.3 2.8 1.1a9.5 9.5 0 0 1 5.2 0c1.9-1.4 2.8-1.1 2.8-1.1.6 1.5.2 2.5.1 2.8.7.7 1.1 1.7 1.1 2.8 0 4-2.4 4.8-4.6 5.1.3.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z" />
+            </svg>
+          </a>
+          <a class="social-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zM17.8 6.6a1.2 1.2 0 1 1-1.2-1.2 1.2 1.2 0 0 1 1.2 1.2z" />
+            </svg>
+          </a>
+          <a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18.9 2H22l-7.8 8.9L23 22h-6.8l-5.3-6.7L5.1 22H2l8.3-9.4L1 2h6.9l4.8 6.1L18.9 2zm-1.2 18h1.9L7 3.9H5L17.7 20z" />
+            </svg>
+          </a>
+          <a class="social-link" href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2a9.9 9.9 0 0 0-8.6 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 6.9 12l-.2.3.8 2.9-3-.8-.3.2A8 8 0 1 1 12 4zm4.1 10.1c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.6.1-.2.2-.7.7-.8.9-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2-1.2-.7-.6-1.2-1.4-1.3-1.7-.1-.3 0-.4.1-.5.1-.1.2-.3.3-.4.1-.1.1-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.1.9 2.3c.1.2 1.6 2.5 3.9 3.5.5.2.9.4 1.2.5.5.2 1 .2 1.4.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.2-1-.1-.1-.2-.2-.4-.3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
