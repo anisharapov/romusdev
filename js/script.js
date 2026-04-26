@@ -69,8 +69,8 @@
     savedLang && ['fr', 'en', 'ru'].includes(savedLang)
       ? savedLang
       : ['fr', 'en', 'ru'].includes(browserLang)
-      ? browserLang
-      : 'fr';
+        ? browserLang
+        : 'fr';
 
   applyLanguage(defaultLang);
 
@@ -211,3 +211,34 @@
     startCarousel();
   }
 })();
+
+/* ========= CHEMINEE : fumee 3s quand on passe de dark vers light ========= */
+const fireplaceCard = document.querySelector('.roman-fireplace-card');
+const root = document.documentElement;
+let previousTheme = root.getAttribute('data-theme') || 'light';
+
+function syncFireplaceTheme() {
+  const currentTheme = root.getAttribute('data-theme') || 'light';
+  if (!fireplaceCard) return;
+
+  if (previousTheme === 'dark' && currentTheme === 'light') {
+    fireplaceCard.classList.remove('is-extinguishing');
+    void fireplaceCard.offsetWidth; // reset animation
+    fireplaceCard.classList.add('is-extinguishing');
+
+    setTimeout(() => {
+      fireplaceCard.classList.remove('is-extinguishing');
+    }, 3000);
+  }
+
+  if (currentTheme === 'dark') {
+    fireplaceCard.classList.remove('is-extinguishing');
+  }
+
+  previousTheme = currentTheme;
+}
+
+const observer = new MutationObserver(syncFireplaceTheme);
+observer.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+
+syncFireplaceTheme();

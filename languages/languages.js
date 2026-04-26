@@ -27,7 +27,7 @@ window.translations = {
         point3Text: 'Simple pour vous, rassurant pour vos clients.',
 
         floatingNote:
-            'Une image sérieuse, propre et mémorable pour vos services web.',
+            'Une image sérieuse, propre et mémorable pour vos services web. Qualite et élégance au rendez-vous',
 
         servicesTitle: 'Offres simples',
         servicesText:
@@ -308,7 +308,7 @@ window.translations = {
         point3Text: 'Simple for you, reassuring for your clients.',
 
         floatingNote:
-            'A serious, clean and memorable image for your web services.',
+            'A serious, clean and memorable image for your web services. Quality and elegance at every turn.',
 
         servicesTitle: 'Simple offers',
         servicesText:
@@ -564,7 +564,7 @@ window.translations = {
         point3Text: 'Просто для вас и понятно для клиента.',
 
         floatingNote:
-            'Серьёзный, чистый и запоминающийся образ для ваших веб-услуг.',
+            'Серьёзный, чистый и запоминающийся образ для ваших веб-услуг. Качество и элегантность гарантированы.',
 
         servicesTitle: 'Простые тарифы',
         servicesText:

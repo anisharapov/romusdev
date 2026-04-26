@@ -14,8 +14,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css" />
-
   <script src="./languages/languages.js"></script>
   <script src="./js/script.js" defer></script>
 
@@ -23,23 +27,16 @@
 
 <body>
   <!-- <a href="#contenu" class="skip-link" data-i18n="skipLink">Aller au contenu</a> -->
-    <a
-    href="https://wa.me/+33755097194"
-    class="sticky-contact"
-    aria-label="Contacter via WhatsApp"
-    target="_blank"
-    rel="noopener noreferrer"
-    data-i18n="stickyContact"
-  >
+  <a href="https://wa.me/+33755097194" class="sticky-contact" aria-label="Contacter via WhatsApp" target="_blank"
+    rel="noopener noreferrer" data-i18n="stickyContact">
     Pour contacter
   </a>
 
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html#top" class="brand" aria-label="Romus DEV accueil">
-        <span class="brand-mark" aria-hidden="true">
-          <!-- même logo -->
-        </span>
+      <a href="./index.html#top" class="brand" aria-label="Romus DEV accueil">
+        <img class="brand-mark" src="./img/logo_romus_beige.jpg" alt="Romus Dev logo">
+
         <span class="brand-name">
           <strong>ROMUS DEV</strong>
           <span data-i18n="brandSubtitle">Sites internet</span>
@@ -47,10 +44,10 @@
       </a>
 
       <nav class="nav-links" aria-label="Navigation principale">
-        <a href="services.html" data-i18n="navServices">Services</a>
-        <a href="gallery.html" data-i18n="navGallery">Galerie</a>
-        <a href="process.html" data-i18n="navProcess">Méthode</a>
-        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <a href="./services.html" data-i18n="navServices">Services</a>
+        <a href="./gallery.html" data-i18n="navGallery">Galerie</a>
+        <a href="./process.html" data-i18n="navProcess">Méthode</a>
+        <a href="./contact.html" data-i18n="navContact">Contact</a>
 
         <div class="toolbar">
           <div class="lang-switcher" aria-label="Choix de langue">
@@ -58,6 +55,7 @@
             <button class="lang-btn" type="button" data-lang="en">EN</button>
             <button class="lang-btn" type="button" data-lang="ru">RU</button>
           </div>
+
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Activer le mode sombre"></button>
         </div>
       </nav>
@@ -82,7 +80,7 @@
         </div>
 
         <div class="hero-card reveal" aria-hidden="true">
-          <div class="temple">
+          <div class="hero-image">
             <!-- SVG comme avant -->
           </div>
           <div class="floating-note">
