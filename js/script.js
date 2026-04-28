@@ -35,7 +35,7 @@
 
   // ---------- LANGUES ----------
   function applyLanguage(lang) {
-    if (!translations[lang]) return;
+    if (!window.translations || !translations[lang]) return;
 
     document.documentElement.lang = lang;
 
@@ -55,9 +55,18 @@
       }
     });
 
-    langButtons.forEach((btn) => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
+    document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (!key || !translations[lang][key]) return;
+
+      el.setAttribute('placeholder', translations[lang][key]);
     });
+
+    if (typeof langButtons !== 'undefined' && langButtons.length) {
+      langButtons.forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
 
     localStorage.setItem('romus-lang', lang);
   }
@@ -74,13 +83,15 @@
 
   applyLanguage(defaultLang);
 
-  langButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const lang = btn.dataset.lang;
-      if (!['fr', 'en', 'ru'].includes(lang)) return;
-      applyLanguage(lang);
+  if (typeof langButtons !== 'undefined' && langButtons.length) {
+    langButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        if (!['fr', 'en', 'ru'].includes(lang)) return;
+        applyLanguage(lang);
+      });
     });
-  });
+  }
 
   // ---------- ANIMATION REVEAL ----------
   const revealElements = document.querySelectorAll('.reveal');
@@ -242,3 +253,26 @@ const observer = new MutationObserver(syncFireplaceTheme);
 observer.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
 
 syncFireplaceTheme();
+
+/* ========= VIDEO AUTOPLAY ========= */
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector('[data-autoplay="full-visible"]');
+  if (!video) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio >= 0.9) {
+          video.play().catch(() => { });
+        } else {
+          video.pause();
+        }
+      });
+    },
+    {
+      threshold: [0, 0.9, 1]
+    }
+  );
+
+  observer.observe(video);
+});

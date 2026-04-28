@@ -9,8 +9,21 @@ window.translations = {
         skipLink: 'Aller au contenu',
 
         // INDEX
-        homeMetaDescription:
-            'Romus DEV crée des sites internet élégants, rapides et modernes pour indépendants, artisans et petites entreprises.',
+        contactFormIntro:
+            "Présentez-vous, décrivez votre activité et le type de site que vous souhaitez. Vous pouvez aussi indiquer un budget ou une fourchette.",
+        contactNameLabel: "Nom / Prénom",
+        contactNamePlaceholder: "Votre nom",
+        contactEmailLabel: "Email",
+        contactEmailPlaceholder: "votre@email.com",
+        contactPreferredLabel: "Moyen de contact préféré",
+        contactPreferredPlaceholder: "WhatsApp, Telegram, téléphone...",
+        contactProjectLabel: "Parlez-moi de votre projet",
+        contactProjectPlaceholder:
+            "Type de site, objectif, délais, budget approximatif...",
+        contactFormHelp:
+            "Plus vous donnez de détails, plus la réponse sera précise.",
+        contactSubmitButton: "Envoyer le message",
+        homeMetaDescription: 'Romus DEV crée des sites internet élégants, rapides et modernes pour indépendants, artisans et petites entreprises.',
         stickyContact: 'Pour contacter',
         eyebrow: 'Style sobre · esprit romain',
         heroTitle: 'Je crée des sites internet élégants pour votre activité.',
@@ -292,6 +305,20 @@ window.translations = {
         navProcess: 'Process',
         navContact: 'Contact',
         skipLink: 'Skip to content',
+        contactFormIntro:
+            "Introduce yourself, describe your activity and the type of website you need. You can also mention a budget or a price range.",
+        contactNameLabel: "Full name",
+        contactNamePlaceholder: "Your name",
+        contactEmailLabel: "Email",
+        contactEmailPlaceholder: "your@email.com",
+        contactPreferredLabel: "Preferred contact method",
+        contactPreferredPlaceholder: "WhatsApp, Telegram, phone...",
+        contactProjectLabel: "Tell me about your project",
+        contactProjectPlaceholder:
+            "Type of website, goal, timeline, approximate budget...",
+        contactFormHelp:
+            "The more details you provide, the more accurate the reply will be.",
+        contactSubmitButton: "Send message",
 
         eyebrow: 'Minimal style · Roman spirit',
         heroTitle: 'I build elegant websites for your business.',
@@ -546,6 +573,21 @@ window.translations = {
         navProcess: 'Этапы',
         navContact: 'Контакт',
         skipLink: 'Перейти к содержимому',
+
+        contactFormIntro:
+            "Представьтесь, опишите вашу деятельность и тип сайта, который вам нужен. Вы также можете указать бюджет или примерный диапазон.",
+        contactNameLabel: "Имя / Фамилия",
+        contactNamePlaceholder: "Ваше имя",
+        contactEmailLabel: "Email",
+        contactEmailPlaceholder: "ваша почта@example.com",
+        contactPreferredLabel: "Предпочтительный способ связи",
+        contactPreferredPlaceholder: "WhatsApp, Telegram, телефон...",
+        contactProjectLabel: "Расскажите о вашем проекте",
+        contactProjectPlaceholder:
+            "Тип сайта, цель, сроки, примерный бюджет...",
+        contactFormHelp:
+            "Чем больше деталей вы укажете, тем точнее будет ответ.",
+        contactSubmitButton: "Отправить сообщение",
 
         // INDEX
         eyebrow: 'Сдержанный стиль · дух Рима',

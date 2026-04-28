@@ -74,15 +74,43 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#form" data-i18n="contactHeroCtaPrimary">Remplir le formulaire</a>
-            <a class="btn btn-secondary" href="mailto:contact@romus.dev" data-i18n="contactHeroCtaSecondary">Écrire un
+            <a class="btn btn-secondary" href="mailto:romusdev@gmail.com" data-i18n="contactHeroCtaSecondary">Écrire un
               email</a>
           </div>
         </div>
 
         <div class="hero-card reveal" aria-hidden="true">
           <div class="hero-image">
-            <!-- svg -->
+            <div class="roman-scroll" aria-hidden="true">
+              <div class="scroll-rod scroll-rod-top">
+                <span class="rod-cap rod-cap-left"></span>
+                <span class="rod-cap rod-cap-right"></span>
+              </div>
+
+              <div class="scroll-sheet">
+                <div class="scroll-sheet-inner">
+                  <p class="scroll-title">Salve in mundo Romus Dev</p>
+                  <p class="scroll-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolore est
+                    distinctio sequi. Quidem quis neque unde, praesentium doloremque dolorem cum! Quo voluptatum
+                    voluptatibus porro repellat quae harum! Temporibus, vel.</p>
+
+
+                  <span class="scroll-line"></span>
+                  <span class="scroll-line"></span>
+                  <span class="scroll-line short"></span>
+                  <span class="scroll-line"></span>
+                  <span class="scroll-line medium"></span>
+                  <span class="scroll-line short"></span>
+                </div>
+              </div>
+
+              <div class="scroll-rod scroll-rod-bottom">
+                <span class="rod-cap rod-cap-left"></span>
+                <span class="rod-cap rod-cap-right"></span>
+              </div>
+            </div>
           </div>
+
           <div class="floating-note">
             <strong>Romus DEV</strong>
             <span data-i18n="contactHeroNote">
@@ -91,70 +119,179 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section id="form">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 data-i18n="contactFormTitle">Formulaire de contact</h2>
-          <p data-i18n="contactFormIntro">
-            Présentez-vous, décrivez votre activité et le type de site que vous souhaitez.
-            Vous pouvez également indiquer un budget ou une fourchette.
-          </p>
-        </div>
-
-        <form class="cta-box reveal" action="#" method="post">
-          <div>
-            <label for="name" data-i18n="contactFormNameLabel">Nom / Prénom</label>
-            <input id="name" name="name" type="text" placeholder="Votre nom" required />
-          </div>
-
-          <div>
-            <label for="email" data-i18n="contactFormEmailLabel">Email</label>
-            <input id="email" name="email" type="email" placeholder="votre.email@example.com" required />
-          </div>
-
-          <div>
-            <label for="channel" data-i18n="contactFormChannelLabel">Moyen de contact préféré</label>
-            <input id="channel" name="channel" type="text" placeholder="WhatsApp, Telegram, téléphone..." />
-          </div>
-
-          <div>
-            <label for="message" data-i18n="contactFormMessageLabel">Parlez-moi de votre projet</label>
-            <textarea id="message" name="message" rows="5"
-              placeholder="Type de site, objectif, délais, budget approximatif..."></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary" data-i18n="contactFormSubmit">
-            Envoyer le message
-          </button>
-        </form>
       </div>
     </section>
 
-    <section id="direct">
-      <div class="container">
-        <div class="cta-box reveal">
-          <div>
-            <div class="eyebrow" style="margin-bottom:1rem" data-i18n="contactDirectEyebrow">Contact direct</div>
-            <h2
-              style="font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:0.8rem;letter-spacing:0.03em"
-              data-i18n="contactDirectTitle">
-              Vous préférez un message rapide&nbsp;?
-            </h2>
-            <p data-i18n="contactDirectText">
-              Vous pouvez m’écrire directement par email ou via votre canal préféré.
-              Cette base de page permet d’ajouter plus tard des liens cliquables vers WhatsApp ou Telegram.
+    <section class="gallery-section gallery-video" aria-labelledby="gallery-video-title">
+      <div class="gallery-video-inner">
+        <header class="gallery-video-header">
+          <p class="eyebrow" data-i18n="galleryVideoEyebrow">Aperçu vidéo</p>
+          <h2 id="gallery-video-title" data-i18n="galleryVideoTitle">
+            Une vidéo de présentation de projet
+          </h2>
+          <p class="gallery-video-intro" data-i18n="galleryVideoText">
+            Cette section pourra accueillir une courte vidéo montrant le défilement d’une page,
+            un avant / après ou une démonstration de navigation sur un site Romus DEV.
+          </p>
+        </header>
+
+        <div class="gallery-video-frame">
+          <div class="gallery-video-media">
+            <video class="gallery-video-player" controls muted playsinline preload="metadata"
+              poster="img/romus-eye-poster.jpg" data-autoplay="full-visible">
+              <source src="video/romus_eye.mp4" type="video/mp4">
+              Votre navigateur ne supporte pas la vidéo HTML5.
+            </video>
+          </div>
+
+          <div class="gallery-video-note">
+            <span class="gallery-video-note-label" data-i18n="galleryVideoNoteLabel">
+              Idée
+            </span>
+            <p class="gallery-video-note-text" data-i18n="galleryVideoNoteText">
+              Vous pourrez ici intégrer une capture vidéo de votre écran montrant un site
+              en train de défiler, pour donner un aperçu plus vivant de l’expérience.
             </p>
           </div>
-          <a href="mailto:romusdev@gmail.com" class="btn btn-secondary" data-i18n="contactDirectButton">
-            romusdev@gmail.com
-          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="galleryTitle">Carrousel visuel</h2>
+          <p data-i18n="galleryText">
+            Un carrousel de 12 images défile automatiquement toutes les 3 secondes pour donner plus de vie à votre page.
+          </p>
+        </div>
+
+        <div class="carousel-shell reveal" aria-roledescription="carousel">
+          <div class="carousel-nav" aria-label="Contrôles du carrousel">
+            <button class="carousel-arrow carousel-arrow-prev" type="button" id="prevSlide"
+              aria-label="Image précédente">‹</button>
+            <button class="carousel-arrow carousel-arrow-next" type="button" id="nextSlide"
+              aria-label="Image suivante">›</button>
+          </div>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carouselTrack">
+              <figure class="slide">
+                <img src="./img/carrousel.contact/3oDP0.jpg" alt="Projet web 1" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide1">Projet web 01</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./img/carrousel.contact/d0Udi.jpg" alt="Projet web 2" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide2">Projet web 02</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./img/carrousel.contact/yafEX.jpg" alt="Projet web 3" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide3">Projet web 03</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./img/carrousel.contact/zeOBH.jpg" alt="Projet web 4" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide4">Projet web 04</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./img/carrousel.contact/LA2Cg.jpg" alt="Projet web 5" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide5">Projet web 05</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./img/carrousel.contact/nXPub.jpg" alt="Projet web 6" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide6">Projet web 06</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./img/carrousel.contact/nyImj.jpg" alt="Projet web 7" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide7">Projet web 07</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./img/carrousel.contact/roSl6.jpg" alt="Projet web 8" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide8">Projet web 08</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./img/carrousel.contact/wP52u.jpg" alt="Projet web 9" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide9">Projet web 09</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./img/carrousel.contact/xxAyP.jpg" alt="Projet web 10" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide10">Projet web 10</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="./img/carrousel.contact/zeOBH.jpg" alt="Projet web 11" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide11">Projet web 11</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="img/carroussel12.jpg" alt="Projet web 12" width="1600" height="900" loading="lazy">
+                <figcaption class="slide-caption" data-i18n="slide12">Projet web 12</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="carousel-dots" id="carouselDots" aria-label="Navigation du carrousel"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- FORMULAIRE DE CONTACT -->
+    <section id="form" class="contact-section">
+      <div class="container">
+        <div class="contact-intro">
+          <h2 data-i18n="contactFormTitle">Formulaire de contact</h2>
+          <p data-i18n="contactFormIntro">
+            Présentez-vous, décrivez votre activité et le type de site que vous souhaitez.
+            Vous pouvez aussi indiquer un budget ou une fourchette.
+          </p>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form">
+            <div class="form-row">
+              <label for="name" data-i18n="contactNameLabel">Nom / Prénom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom"
+                data-i18n-placeholder="contactNamePlaceholder" />
+            </div>
+
+            <div class="form-row">
+              <label for="email" data-i18n="contactEmailLabel">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com"
+                data-i18n-placeholder="contactEmailPlaceholder" />
+            </div>
+
+            <div class="form-row">
+              <label for="contact" data-i18n="contactPreferredLabel">
+                Moyen de contact préféré
+              </label>
+              <input type="text" id="contact" name="contact" placeholder="WhatsApp, Telegram, téléphone..."
+                data-i18n-placeholder="contactPreferredPlaceholder" />
+            </div>
+
+            <div class="form-row">
+              <label for="project" data-i18n="contactProjectLabel">
+                Parlez-moi de votre projet
+              </label>
+              <textarea id="project" name="project" data-i18n-placeholder="contactProjectPlaceholder"
+                placeholder="Type de site, objectif, délais, budget approximatif..."></textarea>
+              <div class="form-help" data-i18n="contactFormHelp">
+                Plus vous donnez de détails, plus la réponse sera précise.
+              </div>
+            </div>
+
+            <div class="contact-submit">
+              <button type="submit">
+                <span class="btn-icon" aria-hidden="true">✒</span>
+                <span class="btn-text" data-i18n="contactSubmitButton">Envoyer le message</span>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
+
+  <!---------- FOOTER ---------->
   <footer class="footer-wrap">
     <div class="container footer-card">
       <div class="footer-top">
@@ -162,12 +299,59 @@
           <p data-i18n="footerLeft">© 2026 Romus DEV — Création de sites internet.</p>
           <p data-i18n="footerRight">Une base simple aujourd'hui, évolutive demain.</p>
         </div>
+
         <div class="footer-social" aria-label="Réseaux sociaux">
-          <!-- mêmes icônes que sur les autres pages -->
+          <a class="social-link" href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.2-1.5 1.5-1.5h1.7V4.7c-.3 0-1.5-.1-2.8-.1-2.8 0-4.8 1.7-4.8 4.8v2.5H6v3.1h2.9v8h4.6z" />
+            </svg>
+          </a>
+
+          <a class="social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1-.9-1.3-.9-1.3-.8-.6.1-.6.1-.6.9.1 1.4.9 1.4.9.8 1.4 2.2 1 2.8.8.1-.6.3-1 .6-1.2-2.2-.3-4.6-1.1-4.6-5.1 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.3.1-2.8 0 0 .9-.3 2.8 1.1a9.5 9.5 0 0 1 5.2 0c1.9-1.4 2.8-1.1 2.8-1.1.6 1.5.2 2.5.1 2.8.7.7 1.1 1.7 1.1 2.8 0 4-2.4 4.8-4.6 5.1.3.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z" />
+            </svg>
+          </a>
+
+          <a class="social-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zM17.8 6.6a1.2 1.2 0 1 1-1.2-1.2 1.2 1.2 0 0 1 1.2 1.2z" />
+            </svg>
+          </a>
+
+          <a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18.9 2H22l-7.8 8.9L23 22h-6.8l-5.3-6.7L5.1 22H2l8.3-9.4L1 2h6.9l4.8 6.1L18.9 2zm-1.2 18h1.9L7 3.9H5L17.7 20z" />
+            </svg>
+          </a>
+
+          <a class="social-link" href="https://wa.me/+33755097194" target="_blank" rel="noopener noreferrer"
+            aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2a9.9 9.9 0 0 0-8.6 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 6.9 12l-.2.3.8 2.9-3-.8-.3.2A8 8 0 1 1 12 4zm4.1 10.1c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.6.1-.2.2-.7.7-.8.9-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2-1.2-.7-.6-1.2-1.4-1.3-1.7-.1-.3 0-.4.1-.5.1-.1.2-.3.3-.4.1-.1.1-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.1.9 2.3c.1.2 1.6 2.5 3.9 3.5.5.2.9.4 1.2.5.5.2 1 .2 1.4.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.2-1-.1-.1-.2-.2-.4-.3z" />
+            </svg>
+          </a>
+
+          <a class="social-link" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1.02 4.6 1.02 3.5 1.9 1.5 3 1.5 4.98 2.4 4.98 3.5zM1.2 8.2h3.6V22H1.2V8.2zM8.3 8.2h3.4v1.9h.1c.5-.9 1.7-2.1 3.6-2.1 3.9 0 4.6 2.6 4.6 6V22h-3.6v-6.1c0-1.4 0-3.3-2-3.3-2 0-2.3 1.5-2.3 3.2V22H8.3V8.2z" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>

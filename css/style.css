@@ -555,6 +555,215 @@ section {
   padding: var(--space-16) 0;
 }
 
+/* =========================
+   CONTACT FORM — VERTICAL
+========================= */
+
+.contact-section {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.contact-intro {
+  max-width: 760px;
+  margin: 0 auto var(--space-8);
+}
+
+.contact-intro h1,
+.contact-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.2rem;
+  color: var(--color-text);
+}
+
+.contact-intro p {
+  max-width: 60ch;
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
+
+.contact-form-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 2rem;
+  background: linear-gradient(180deg, var(--color-surface-2), var(--color-surface));
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.form-row {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.form-row label {
+  font-size: var(--text-sm);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 1.15rem;
+  background: color-mix(in srgb, var(--color-surface-2) 72%, white 28%);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 1rem 1.1rem;
+  outline: none;
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    background var(--transition),
+    transform var(--transition);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: color-mix(in srgb, var(--color-text-muted) 80%, transparent);
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover,
+.contact-form select:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: color-mix(in srgb, var(--color-primary) 70%, var(--color-border));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-primary) 14%, transparent);
+  background: var(--color-surface-2);
+}
+
+.contact-form textarea {
+  min-height: 220px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.contact-form .form-help {
+  margin-top: -0.1rem;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.contact-submit {
+  margin-top: 0.4rem;
+}
+
+.contact-submit .btn,
+.contact-submit button,
+.contact-form button[type="submit"] {
+  width: 100%;
+  min-height: 60px;
+  border-radius: 999px;
+  padding: 1rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #8d6a3d, #a77a43);
+  color: #fff7ec;
+  border: 1px solid rgba(255, 237, 214, 0.35);
+  box-shadow: 0 14px 30px rgba(77, 52, 28, 0.18);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background var(--transition);
+}
+
+.contact-submit .btn:hover,
+.contact-submit button:hover,
+.contact-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #77552f, #956736);
+  box-shadow: 0 18px 34px rgba(77, 52, 28, 0.24);
+}
+
+.contact-submit .btn:active,
+.contact-submit button:active,
+.contact-form button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Optionnel : petite ligne premium en haut de la carte */
+.contact-form::before {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-primary), transparent);
+  margin-bottom: 0.2rem;
+}
+
+/* DARK MODE */
+[data-theme="dark"] .contact-form {
+  background: linear-gradient(180deg, var(--color-surface-2), var(--color-surface));
+  border-color: rgba(244, 228, 205, 0.12);
+}
+
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea,
+[data-theme="dark"] .contact-form select {
+  background: #241b15;
+  color: var(--color-text);
+  border-color: rgba(244, 228, 205, 0.14);
+}
+
+[data-theme="dark"] .contact-form input::placeholder,
+[data-theme="dark"] .contact-form textarea::placeholder {
+  color: rgba(242, 231, 216, 0.55);
+}
+
+[data-theme="dark"] .contact-form input:focus,
+[data-theme="dark"] .contact-form textarea:focus,
+[data-theme="dark"] .contact-form select:focus {
+  background: #2b2018;
+  border-color: rgba(215, 176, 122, 0.5);
+  box-shadow: 0 0 0 4px rgba(215, 176, 122, 0.12);
+}
+
+/* RESPONSIVE */
+@media (max-width: 760px) {
+  .contact-intro h1,
+  .contact-intro h2 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .contact-intro p {
+    font-size: var(--text-base);
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  .contact-form textarea {
+    min-height: 180px;
+  }
+
+  .contact-submit .btn,
+  .contact-submit button,
+  .contact-form button[type="submit"] {
+    min-height: 56px;
+  }
+}
+
 /* Titre + intro de section */
 .section-head {
   display: grid;
@@ -574,6 +783,314 @@ section {
   max-width: 62ch;
 }
 
+/* =========================
+   ROULEAU ROMAIN ANIMÉ
+   ========================= */
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+  padding: 2.5rem;
+  position: relative;
+  isolation: isolate;
+}
+
+.roman-scroll {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 520px);      /* avant: 460px */
+  aspect-ratio: 5 / 5.6;        /* un peu plus "carré" pour gagner en hauteur visible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 20px 40px rgba(43, 26, 12, 0.20));
+}
+
+/* Barres en bois */
+
+.scroll-rod {
+  position: relative;
+  width: 92%;
+  height: 40px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #9b7654 0%, #7d5c3e 45%, #60452f 100%);
+  box-shadow:
+    inset 0 2px 3px rgba(255, 245, 230, 0.22),
+    inset 0 -3px 4px rgba(59, 33, 17, 0.28),
+    0 6px 12px rgba(58, 34, 17, 0.16);
+  z-index: 3;
+  animation: rod-breathe 5s ease-in-out infinite;
+}
+
+.scroll-rod-top {
+  transform: translateY(14px);
+}
+
+.scroll-rod-bottom {
+  transform: translateY(-14px);
+}
+
+.rod-cap {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 35%, #c79b6e 0%, #936b47 48%, #5e412c 100%);
+  transform: translateY(-50%);
+  box-shadow:
+    0 0 0 4px rgba(118, 84, 56, 0.85),
+    0 3px 6px rgba(45, 26, 13, 0.18);
+}
+
+.rod-cap-left {
+  left: -10px;
+}
+
+.rod-cap-right {
+  right: -10px;
+}
+
+/* Feuille parchemin */
+
+.scroll-sheet {
+  position: relative;
+  width: 88%;                   /* avant: 84% -> feuille plus large */
+  height: 420px;                /* avant: 360px -> plus haute */
+  margin: -2px 0;
+  background: linear-gradient(180deg, #f4ead8 0%, #eadabd 52%, #dec7a3 100%);
+  border-left: 1px solid rgba(121, 87, 56, 0.18);
+  border-right: 1px solid rgba(121, 87, 56, 0.18);
+  overflow: hidden;
+  z-index: 2;
+  transform-origin: center top;
+  animation: scroll-open-close 8s ease-in-out infinite;
+  box-shadow:
+    inset 0 0 32px rgba(145, 108, 67, 0.16),
+    inset 0 12px 22px rgba(255, 250, 240, 0.18),
+    inset 0 -12px 18px rgba(116, 78, 46, 0.10);
+}
+
+.scroll-sheet::before,
+.scroll-sheet::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 42px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.scroll-sheet::before {
+  top: 0;
+  background: linear-gradient(180deg, rgba(124, 86, 53, 0.18), transparent);
+}
+
+.scroll-sheet::after {
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(124, 86, 53, 0.18), transparent);
+}
+
+/* Contenu intérieur */
+
+.scroll-sheet-inner {
+  position: absolute;
+  inset: 38px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  opacity: 0.92;
+}
+
+.scroll-title {
+  margin: 0 0 0.75rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  color: #5f4028;
+  font-weight: 700;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.scroll-line {
+  display: block;
+  height: 8px;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8d6847 0%, #6c4b30 100%);
+  opacity: 0.58;
+}
+
+.scroll-line.short {
+  width: 66%;
+}
+
+.scroll-line.medium {
+  width: 82%;
+}
+
+/* Animations */
+
+@keyframes scroll-open-close {
+  0% {
+    height: 28px;
+    opacity: 0.9;
+  }
+  18% {
+    height: 220px;
+    opacity: 1;
+  }
+  58% {
+    height: 280px;
+    opacity: 1;
+  }
+  82% {
+    height: 120px;
+    opacity: 0.96;
+  }
+  100% {
+    height: 28px;
+    opacity: 0.9;
+  }
+}
+
+@keyframes rod-breathe {
+  0% {
+    width: 88%;
+  }
+  18% {
+    width: 84%;
+  }
+  58% {
+    width: 82%;
+  }
+  82% {
+    width: 85%;
+  }
+  100% {
+    width: 88%;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .hero-image {
+    min-height: 320px;
+    padding: 1.25rem;
+  }
+
+  .roman-scroll {
+    width: min(100%, 280px);
+  }
+
+  .scroll-sheet {
+    height: 220px;
+  }
+
+  .scroll-sheet-inner {
+    inset: 22px 18px;
+    gap: 10px;
+  }
+}
+
+/* Respect accessibilité (motion) */
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-sheet,
+  .scroll-rod-top,
+  .scroll-rod-bottom {
+    animation: none;
+  }
+
+  .scroll-sheet {
+    height: 220px;
+  }
+}
+
+/******************************************
+ * VIDEO GALLERY
+ ******************************************/
+
+.gallery-video {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.gallery-video-inner {
+  max-width: 1200px;            /* avant: 960px */
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.gallery-video-frame {
+  background: var(--color-surface-2, #f7f3eb);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.16),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+  display: grid;
+  gap: 1rem;
+}
+
+.gallery-video-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.9rem;
+  background: #000;
+}
+
+.gallery-video-player {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Brouillard gauche / droite */
+
+.gallery-video-media::before,
+.gallery-video-media::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 88px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gallery-video-media::before {
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(247, 243, 235, 0.75) 0%,
+    rgba(247, 243, 235, 0.35) 35%,
+    rgba(247, 243, 235, 0) 100%
+  );
+}
+
+.gallery-video-media::after {
+  right: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(247, 243, 235, 0.75) 0%,
+    rgba(247, 243, 235, 0.35) 35%,
+    rgba(247, 243, 235, 0) 100%
+  );
+}
 
 /******************************************
  * 8. SERVICES / CARTES
