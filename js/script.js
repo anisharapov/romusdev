@@ -276,3 +276,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(video);
 });
+
+
+/* ========= PAGE TRANSFER TO FORM ========= */
+// document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach((link) => {
+//   link.addEventListener('click', function (e) {
+//     const href = this.getAttribute('href');
+//     if (!href) return;
+
+//     const target = document.querySelector(href);
+//     if (!target) return;
+
+//     e.preventDefault();
+//     target.scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start'
+//     });
+
+//     history.replaceState(null, '', href);
+//   });
+// });

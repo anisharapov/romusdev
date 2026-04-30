@@ -94,7 +94,7 @@ window.translations = {
         step3Title: 'Vous présentez vos services',
         step3Text:
             'Vous recevez une page prête à être intégrée, modifiée et publiée pour démarrer rapidement.',
-
+        ctaFormButton: "Remplir le formulaire",
         ctaEyebrow: 'Romus DEV',
         ctaTitle: 'Prêt à avoir votre site ?',
         ctaText:
@@ -394,6 +394,7 @@ window.translations = {
         ctaTitle: 'Ready to get your website?',
         ctaText:
             'You can add your email, WhatsApp or Telegram here when you are ready. For now, this section acts as a clean base for your future contact block.',
+        ctaFormButton: "Fill out the form",
 
         footerLeft: '© 2026 Romus DEV — Website creation.',
         footerRight: 'A simple base today, scalable tomorrow.',
@@ -665,6 +666,7 @@ window.translations = {
         ctaTitle: 'Готовы получить свой сайт?',
         ctaText:
             'Позже вы сможете добавить сюда email, WhatsApp или Telegram. Пока это аккуратная основа для будущего блока контактов.',
+        ctaFormButton: "Заполнить форму",
 
         footerLeft: '© 2026 Romus DEV — Создание сайтов.',
         footerRight: 'Простая база сегодня, развитие завтра.',
