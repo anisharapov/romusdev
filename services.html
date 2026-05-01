@@ -84,28 +84,106 @@
 
         <div class="hero-card reveal" aria-hidden="true">
           <div class="hero-image">
-            <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M46 408H354" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
-              <path d="M72 380H328" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
-              <path d="M90 144H310" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
-              <path d="M200 70L332 130H68L200 70Z" fill="currentColor" opacity="0.18" />
-              <path d="M68 130H332" stroke="currentColor" stroke-width="12" stroke-linecap="round" />
-              <path d="M112 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
-              <path d="M168 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
-              <path d="M232 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
-              <path d="M288 144V380" stroke="currentColor" stroke-width="16" stroke-linecap="round" />
-              <path d="M94 96L200 48L306 96" stroke="currentColor" stroke-width="10" stroke-linecap="round"
-                stroke-linejoin="round" />
+            <svg viewBox="70 45 465 350" preserveAspectRatio="xMidYMid slice" fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+              <defs>
+                <radialGradient id="soleil" gradientUnits="userSpaceOnUse" cx="315" cy="45" r="300">
+                  <stop offset="0%" stop-color="#FFC840" stop-opacity="0.6" />
+                  <stop offset="60%" stop-color="#FF9500" stop-opacity="0.1" />
+                  <stop offset="100%" stop-color="#FF9500" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+
+              <!-- Soleil et halos (s'allument seulement en dark via CSS) -->
+              <rect class="sun-glow" x="70" y="45" width="465" height="350" fill="url(#soleil)">
+                <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" repeatCount="indefinite" />
+              </rect>
+
+              <ellipse class="sun-glow" cx="315" cy="200" rx="180" ry="160" fill="url(#soleil)">
+                <animate attributeName="rx" values="180;200;180" dur="4s" repeatCount="indefinite" />
+                <animate attributeName="ry" values="160;180;160" dur="4s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.85;1;0.85" dur="4s" repeatCount="indefinite" />
+              </ellipse>
+
+              <ellipse class="sun-glow" cx="315" cy="55" rx="270" ry="210" fill="url(#soleil)">
+                <animate attributeName="rx" values="270;295;270" dur="4s" repeatCount="indefinite" />
+                <animate attributeName="ry" values="210;230;210" dur="4s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.85;1;0.85" dur="4s" repeatCount="indefinite" />
+              </ellipse>
+
+              <!-- Roue gauche -->
+              <g class="wheel-left">
+                <circle cx="178" cy="310" r="72" stroke="#8B5E1A" stroke-width="10" />
+                <circle cx="178" cy="310" r="10" fill="#8B5E1A" />
+                <line x1="178" y1="238" x2="178" y2="382" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+                <line x1="106" y1="310" x2="250" y2="310" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+                <line x1="129" y1="259" x2="227" y2="361" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+                <line x1="227" y1="259" x2="129" y2="361" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+                <circle cx="178" cy="310" r="72" fill="none" stroke="#C4872A" stroke-width="3" opacity="0.5" />
+              </g>
+
+              <!-- Roue droite -->
+              <g class="wheel-right">
+                <circle cx="452" cy="310" r="72" stroke="#8B5E1A" stroke-width="10" />
+                <circle cx="452" cy="310" r="10" fill="#8B5E1A" />
+                <line x1="452" y1="238" x2="452" y2="382" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+                <line x1="380" y1="310" x2="524" y2="310" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+                <line x1="403" y1="259" x2="501" y2="361" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+                <line x1="501" y1="259" x2="403" y2="361" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+                <circle cx="452" cy="310" r="72" fill="none" stroke="#C4872A" stroke-width="3" opacity="0.5" />
+              </g>
+
+              <!-- Essieu -->
+              <line x1="106" y1="310" x2="524" y2="310" stroke="#6B4512" stroke-width="14" stroke-linecap="round" />
+
+              <!-- Caisse du chariot -->
+              <polygon points="130,310 530,310 500,180 160,180" fill="#C4872A" />
+              <polygon points="130,310 530,310 500,180 160,180" fill="none" stroke="#8B5E1A" stroke-width="4" />
+
+              <!-- Lattes horizontales -->
+              <line x1="160" y1="200" x2="500" y2="200" stroke="#8B5E1A" stroke-width="6" stroke-linecap="round" />
+              <line x1="165" y1="230" x2="495" y2="230" stroke="#8B5E1A" stroke-width="4" stroke-linecap="round" />
+              <line x1="172" y1="260" x2="488" y2="260" stroke="#8B5E1A" stroke-width="3" stroke-linecap="round" />
+              <line x1="178" y1="285" x2="482" y2="285" stroke="#8B5E1A" stroke-width="3" stroke-linecap="round" />
+
+              <!-- Montants verticaux -->
+              <line x1="220" y1="180" x2="220" y2="310" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+              <line x1="315" y1="180" x2="315" y2="310" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+              <line x1="410" y1="180" x2="410" y2="310" stroke="#8B5E1A" stroke-width="5" stroke-linecap="round" />
+
+              <!-- Fronton triangulaire -->
+              <polygon points="300,128 354,182 246,182" fill="#8B5E1A" opacity="0.6" />
+              <polygon points="300,126 357,184 243,184" fill="none" stroke="#6B4512" stroke-width="2" />
+
+              <!-- Timon -->
+              <line x1="315" y1="310" x2="315" y2="58" stroke="#6B4512" stroke-width="10" stroke-linecap="round" />
+
+              <!-- Joug -->
+              <ellipse cx="315" cy="53" rx="22" ry="8" fill="#8B5E1A" />
+              <line x1="295" y1="53" x2="230" y2="115" stroke="#6B4512" stroke-width="7" stroke-linecap="round" />
+              <line x1="335" y1="53" x2="400" y2="115" stroke="#6B4512" stroke-width="7" stroke-linecap="round" />
+
+              <!-- Flèche avant -->
+              <line x1="80" y1="310" x2="178" y2="310" stroke="#6B4512" stroke-width="8" stroke-linecap="round" />
+              <ellipse cx="80" cy="310" rx="14" ry="8" fill="#5A3A0A" opacity="0.7" />
+
+              <!-- Ombre sol -->
+              <ellipse cx="315" cy="388" rx="200" ry="10" fill="#8B5E1A" opacity="0.12" />
+              <line x1="80" y1="383" x2="580" y2="383" stroke="#6B4512" stroke-width="4" stroke-linecap="round"
+                opacity="0.2" />
             </svg>
           </div>
+
           <div class="floating-note">
-            <strong>Romus DEV</strong>
+            <strong>ROMUS DEV</strong>
             <span data-i18n="servicesHeroNote">
-              Chaque service est pensé pour être simple à comprendre, avec un prix clair et un résultat soigné.
+              Chaque service est pensé pour être simple à comprendre,
+              avec un prix clair et un résultat soigné.
             </span>
           </div>
         </div>
-      </div>
+
     </section>
 
     <!-- PACKS PRINCIPAUX -->

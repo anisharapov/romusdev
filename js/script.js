@@ -7,20 +7,15 @@
   // ---------- THÈME ----------
   let currentTheme =
     localStorage.getItem('romus-theme') ||
-    (window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light');
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
   root.setAttribute('data-theme', currentTheme);
 
   function updateIcon() {
     if (!toggle) return;
     toggle.innerHTML = currentTheme === 'dark' ? '☀' : '☾';
-    toggle.setAttribute(
-      'aria-label',
-      currentTheme === 'dark'
-        ? 'Activer le mode clair'
-        : 'Activer le mode sombre'
+    toggle.setAttribute('aria-label',
+      currentTheme === 'dark' ? 'Activer le mode clair' : 'Activer le mode sombre'
     );
   }
 
@@ -45,10 +40,7 @@
 
       if (el.tagName === 'TITLE') {
         el.textContent = translations[lang][key];
-      } else if (
-        el.tagName === 'META' &&
-        el.getAttribute('name') === 'description'
-      ) {
+      } else if (el.tagName === 'META' && el.getAttribute('name') === 'description') {
         el.setAttribute('content', translations[lang][key]);
       } else {
         el.textContent = translations[lang][key];
@@ -58,22 +50,18 @@
     document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
       const key = el.getAttribute('data-i18n-placeholder');
       if (!key || !translations[lang][key]) return;
-
       el.setAttribute('placeholder', translations[lang][key]);
     });
 
-    if (typeof langButtons !== 'undefined' && langButtons.length) {
-      langButtons.forEach((btn) => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-      });
-    }
+    langButtons.forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
 
     localStorage.setItem('romus-lang', lang);
   }
 
   const savedLang = localStorage.getItem('romus-lang');
   const browserLang = (navigator.language || 'fr').slice(0, 2).toLowerCase();
-
   const defaultLang =
     savedLang && ['fr', 'en', 'ru'].includes(savedLang)
       ? savedLang
@@ -83,33 +71,34 @@
 
   applyLanguage(defaultLang);
 
-  if (typeof langButtons !== 'undefined' && langButtons.length) {
-    langButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const lang = btn.dataset.lang;
-        if (!['fr', 'en', 'ru'].includes(lang)) return;
-        applyLanguage(lang);
-      });
+  langButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      if (!['fr', 'en', 'ru'].includes(lang)) return;
+      applyLanguage(lang);
     });
-  }
+  });
 
   // ---------- ANIMATION REVEAL ----------
+document.addEventListener('DOMContentLoaded', () => {
   const revealElements = document.querySelectorAll('.reveal');
+  console.log('revealElements count:', revealElements.length);
 
-  if (revealElements.length) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.16 }
-    );
+  if (!revealElements.length) return;
 
-    revealElements.forEach((el) => observer.observe(el));
-  }
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible'); // ou 'visible', peu importe, tu as les deux
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.16 }
+  );
+
+  revealElements.forEach((el) => revealObserver.observe(el));
+});
 
   // ---------- CARROUSEL ----------
   const track = document.getElementById('carouselTrack');
@@ -139,21 +128,15 @@
 
     function updateCarousel() {
       track.style.opacity = '0.35';
-
       requestAnimationFrame(() => {
         track.style.transform = 'translateX(-' + currentIndex * 100 + '%)';
         track.style.opacity = '1';
       });
-
       dots.forEach((dot, index) => {
         dot.classList.toggle('active', index === currentIndex);
       });
-
       slides.forEach((slide, index) => {
-        slide.setAttribute(
-          'aria-hidden',
-          index === currentIndex ? 'false' : 'true'
-        );
+        slide.setAttribute('aria-hidden', index === currentIndex ? 'false' : 'true');
       });
     }
 
@@ -178,68 +161,38 @@
 
     const carouselShell = document.querySelector('.carousel-shell');
 
-    carouselShell?.addEventListener('mouseenter', () => {
-      clearInterval(intervalId);
-    });
+    carouselShell?.addEventListener('mouseenter', () => clearInterval(intervalId));
+    carouselShell?.addEventListener('mouseleave', () => { clearInterval(intervalId); startCarousel(); });
+    carouselShell?.addEventListener('focusin', () => clearInterval(intervalId));
+    carouselShell?.addEventListener('focusout', () => { clearInterval(intervalId); startCarousel(); });
 
-    carouselShell?.addEventListener('mouseleave', () => {
-      clearInterval(intervalId);
-      startCarousel();
-    });
-
-    carouselShell?.addEventListener('focusin', () => {
-      clearInterval(intervalId);
-    });
-
-    carouselShell?.addEventListener('focusout', () => {
-      clearInterval(intervalId);
-      startCarousel();
-    });
-
-    prevBtn?.addEventListener('click', () => {
-      prevSlide();
-      restartCarousel();
-    });
-
-    nextBtn?.addEventListener('click', () => {
-      nextSlide();
-      restartCarousel();
-    });
+    prevBtn?.addEventListener('click', () => { prevSlide(); restartCarousel(); });
+    nextBtn?.addEventListener('click', () => { nextSlide(); restartCarousel(); });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') {
-        prevSlide();
-        restartCarousel();
-      }
-
-      if (e.key === 'ArrowRight') {
-        nextSlide();
-        restartCarousel();
-      }
+      if (e.key === 'ArrowLeft') { prevSlide(); restartCarousel(); }
+      if (e.key === 'ArrowRight') { nextSlide(); restartCarousel(); }
     });
 
     updateCarousel();
     startCarousel();
   }
+
 })();
 
-/* ========= CHEMINEE : fumee 3s quand on passe de dark vers light ========= */
+/* ========= CHEMINÉE ========= */
 const fireplaceCard = document.querySelector('.roman-fireplace-card');
-const root = document.documentElement;
-let previousTheme = root.getAttribute('data-theme') || 'light';
+let previousTheme = document.documentElement.getAttribute('data-theme') || 'light';
 
 function syncFireplaceTheme() {
-  const currentTheme = root.getAttribute('data-theme') || 'light';
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
   if (!fireplaceCard) return;
 
   if (previousTheme === 'dark' && currentTheme === 'light') {
     fireplaceCard.classList.remove('is-extinguishing');
-    void fireplaceCard.offsetWidth; // reset animation
+    void fireplaceCard.offsetWidth;
     fireplaceCard.classList.add('is-extinguishing');
-
-    setTimeout(() => {
-      fireplaceCard.classList.remove('is-extinguishing');
-    }, 3000);
+    setTimeout(() => fireplaceCard.classList.remove('is-extinguishing'), 3000);
   }
 
   if (currentTheme === 'dark') {
@@ -249,50 +202,27 @@ function syncFireplaceTheme() {
   previousTheme = currentTheme;
 }
 
-const observer = new MutationObserver(syncFireplaceTheme);
-observer.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
-
+const fireplaceObserver = new MutationObserver(syncFireplaceTheme);
+fireplaceObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 syncFireplaceTheme();
 
 /* ========= VIDEO AUTOPLAY ========= */
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const video = document.querySelector('[data-autoplay="full-visible"]');
   if (!video) return;
 
-  const observer = new IntersectionObserver(
+  const videoObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio >= 0.9) {
-          video.play().catch(() => { });
+          video.play().catch(() => {});
         } else {
           video.pause();
         }
       });
     },
-    {
-      threshold: [0, 0.9, 1]
-    }
+    { threshold: [0, 0.9, 1] }
   );
 
-  observer.observe(video);
+  videoObserver.observe(video);
 });
-
-
-/* ========= PAGE TRANSFER TO FORM ========= */
-// document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach((link) => {
-//   link.addEventListener('click', function (e) {
-//     const href = this.getAttribute('href');
-//     if (!href) return;
-
-//     const target = document.querySelector(href);
-//     if (!target) return;
-
-//     e.preventDefault();
-//     target.scrollIntoView({
-//       behavior: 'smooth',
-//       block: 'start'
-//     });
-
-//     history.replaceState(null, '', href);
-//   });
-// });
